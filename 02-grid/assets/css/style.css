@@ -1,0 +1,96 @@
+body{
+    background: #e7e7e7;
+    margin: 0px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+header{
+    grid-area: header;
+    background-color:#25527b;
+    color: white;
+    height: 60px;
+    text-align: center;
+    }
+    menu{
+        display: flex;
+        flex-direction: column;
+        grid-area: menu;
+        background-color: #e7e7e7;
+        margin: 0px;
+        padding-left: 30px;
+    }
+
+    menu h4{
+    margin-top:0px;
+    }
+
+    main{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px,1fr));
+    grid-area: main;
+    background-color:#e7e7e7;
+    gap:20px;
+    margin-right: 20px;
+    
+    }
+    footer{
+    display: flex;
+    grid-area: footer;
+    background-color: white;
+    color:black;
+    height: 60px;
+    align-items: center;
+    justify-content: center; 
+    
+    
+    }
+.grid-container{
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "menu main"
+    "footer footer";
+    gap:20px; 
+}
+.gris{
+   color: #a3a3a2;
+   font-size:smaller;
+}
+menu p{
+    margin: 2px;
+    }
+
+    menu p:hover{
+        margin: 2px;
+        color:goldenrod;
+        }
+
+main .prod{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+   text-align: center;
+
+}
+
+main .prod img{
+    width: 100%;
+}
+main .prod-text{
+    width: 100%;
+    margin-top: -15px;
+    
+}
+main .btn{
+    color:white;
+    background-color:#25527b ;
+    margin: 0px;
+    padding: 10px;
+}
+
+main .btn:hover{
+    color:rgb(10, 6, 59);
+    background-color:#6e96bb ;
+}
+
