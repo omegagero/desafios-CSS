@@ -1,0 +1,325 @@
+body{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav{
+    grid-area: nav;
+    display: flex;
+    background-color: #e2e2e2;
+    margin: 0px;
+    flex-direction: row;
+    justify-content: center;
+    /* align-content: center; */
+    text-align: center;
+    padding-bottom: 5px; 
+    
+}
+
+nav .menus{
+    width: 100%;
+    margin-top: -8px;
+    padding-bottom: 20px;
+       
+} 
+
+nav .menus select{
+    width: 85%;
+    margin-top: 0px;
+    height: 60%;
+} 
+nav .menus p {
+    margin-bottom: 0; 
+}
+
+menu{
+    grid-area: menu;
+    display:flex;
+    background-color:#00579c;
+    color:white;
+    margin: 0px;
+    justify-content: space-between;
+    align-items: center;
+    }
+menu .titles{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+menu .titles img{
+    width: auto;
+    height: 50%;
+    margin-right: 10px;
+    margin-left: -15px;
+}
+menu img{
+    margin-right: 15px;
+    height: 60%;
+    width: auto;
+    
+}
+
+
+
+
+main{
+    display: flex;
+    grid-area: main;
+    background-color: white;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    }
+
+main .card{
+    display: flex;
+    border:1px solid #e2e2e2;
+    width: 90%;
+    margin: 15px;
+    justify-content: center;
+    box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.card:not(:first-child) {
+    display: none;
+
+}
+
+main img{
+    
+    padding: 15px;
+    width: 80%;
+}
+
+main button{
+    padding: 10px;
+    margin-bottom: 15px;
+    margin-top: -10px;
+    background-color:#00579d;
+    color: white;
+    border-radius: 3px;
+    border-style: none;
+}
+
+footer{
+    grid-area: footer;
+    display: flex;
+    background-color: #012f6b;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    padding-top: 10px;
+    
+       
+}
+footer .footimg{
+   display: flex;
+   margin-bottom: -10px;
+}
+
+footer p{
+    display: flex;
+    text-align: center;
+    padding-top: 3px;    
+    margin-bottom: 10px; 
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    margin-top: 10px;
+   
+}
+
+.grid-cont{
+    display: grid;
+    grid-template-areas:
+    "menu"
+    "nav"
+    "main"
+    "footer";
+}
+/* nav select{
+    width: ;
+} */
+
+main .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+main .pagination a {
+    color: #00579d;
+    text-decoration: none;
+    padding: 8px 13px;
+    margin: 0px;
+    margin-right: -1px;
+    border: 1px solid #e2e2e2;
+    cursor: pointer;
+}
+
+main .pagination a:hover {
+    background-color: #00579d;
+    color: white;
+}
+.menuex{
+    display: none;
+}
+
+
+@media (min-width: 576px){
+
+    .grid-cont{
+        display: grid;
+        grid-template-columns: 0.2fr 1fr;
+        grid-template-rows: 60px 1fr 60px;
+        grid-template-areas:
+        "menu menu"
+        "nav main "
+        "footer footer";
+    } 
+    .menu1{
+        display: none;
+        justify-content: center;
+    width: 100%;
+    }
+.menuex{
+    display: flex;
+    
+}
+.menuex p{
+    padding: 25px;
+    
+}
+
+
+nav .menus select{
+    height: 35px;
+    margin-top: 20px;
+   
+} 
+.card:nth-child(-n+2){
+    display:flex;
+}
+ .cards{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+   }
+   
+/* .card{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+    */
+}
+
+.menuex p:hover{
+    color:gold;
+    background-color:#012f6b;
+    
+   
+
+}
+
+
+@media (min-width:992px){
+
+body .card{
+    display: flex !important;
+}
+  .grid-cont{
+    display: grid;
+    grid-template-columns: 1.3fr 6fr;
+    grid-template-rows: 65px 1fr 65px;
+    grid-template-areas:
+    "menu nav "
+    "menu main "
+    "menu main "
+    "footer main";
+    
+}
+.menuex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    width: 100%;
+    
+    
+}
+ .menu1{
+    display: none;
+}
+
+menu{
+    flex-direction: column;
+    justify-content:flex-start;
+    align-content: center;
+    padding-top: 10px;
+    padding-right: 20px;
+    height: 85vh;
+
+   
+}
+
+
+
+nav .menus select{
+    height: 25px;
+    margin-top: 5px;
+   
+} 
+.menuex p{
+    margin-bottom:0px;
+    flex-direction: column;
+    align-items: center;
+    padding:5px;
+    width: 100%;
+    
+    text-align: center;
+     transition: background-color 0.3s ease;
+    
+}
+
+.menuex p:hover{
+    color:gold;
+    background-color:#012f6b;
+    
+   
+
+}
+
+
+
+
+main{
+    height: 85vh    }
+
+main .cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+    overflow-y: scroll;
+    
+}
+
+main .card{
+  
+    width: calc(23% - 20px);
+    margin: 10px;
+}
+}
